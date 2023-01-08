@@ -1,7 +1,5 @@
 package com.example.weatherapp.webclient;
 
-
-import com.example.weatherapp.dto.OpenWeatherDailyDto;
 import com.example.weatherapp.dto.OpenWeatherWeatherDto;
 import com.example.weatherapp.model.WeatherDto;
 import org.springframework.stereotype.Component;

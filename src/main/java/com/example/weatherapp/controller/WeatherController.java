@@ -1,5 +1,6 @@
 package com.example.weatherapp.controller;
 
+import com.example.weatherapp.model.Weather;
 import com.example.weatherapp.model.WeatherDto;
 import com.example.weatherapp.service.WeatherService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class WeatherController {
     }
 
     @PostMapping("/weather/add")
-    public String addWeather(@ModelAttribute WeatherDto weatherDto) {
+    public Weather addWeather(@RequestBody WeatherDto weatherDto) {
         return weatherService.saveWeather(weatherDto);
     }
 }
