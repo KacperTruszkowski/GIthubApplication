@@ -1,13 +1,13 @@
-package com.example.weatherapp;
+package com.example.githubapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WeatherAppApplication {
+public class GithubAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WeatherAppApplication.class, args);
+		SpringApplication.run(GithubAppApplication.class, args);
 	}
 
 }
