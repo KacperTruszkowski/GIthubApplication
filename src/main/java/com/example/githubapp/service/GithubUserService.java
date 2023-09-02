@@ -22,6 +22,9 @@ public class GithubUserService {
     private final RestTemplate restTemplate = new RestTemplate();
 
     public List<Response> getUserRepositories(GithubRequest request) {
+        if (request == null || request.getUserName() == null) {
+            throw new IllegalArgumentException("UserName cannot be null.");
+        }
         ResponseEntity<List<GithubRepository>> responseEntity = restTemplate.exchange(
                 GITHUB_URL + request.getUserName() + REPOS_URL, HttpMethod.GET, null, new ParameterizedTypeReference<>() {}
         );
